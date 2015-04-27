@@ -1,10 +1,14 @@
 require('rspec')
 require('word_counter')
-
+require('pry')
 describe('String#word_counter') do 
-  it("will allow user input string to be broken up into individual words") do
-    expect("I am so very happy, happy, happy to be getting my code review today.".word_counter()).to(eq(["I", "am", "so", "very", "happy,", "happy,", "happy", "to", "be", "getting", "my", "code", "review", "today." ]))
+it("will remove punctuation in order to get an accurate word count") do 
+    expect(".,".word_counter(".")).to(eq(0))
   end
-  it("will remove punctuation in order to get an accurate word count") do 
-    expect("a,.".word_count()).to(eq["a"])
+  it("will allow user input string to be broken up into individual words") do
+     expect("I am happy.".word_counter("am")).to(eql((1)))
+   end
+it("will count how many times a word appears in the string") do
+  expect("happy, happy happy".word_counter("happy")).to(eq(3))
+  end
 end
