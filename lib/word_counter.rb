@@ -5,9 +5,10 @@ class String
     phrase = self 
     letters = phrase.split("")
     counter = 0
-    
     letters.delete(".")
     letters.delete(",")
+    letters.delete('"')
+    word_to_count = word_to_count.delete('"')
     letters = letters.join("")
     letters= letters.split(" ")
     letters.each() do |letter|
