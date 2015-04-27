@@ -4,7 +4,6 @@ class String
   define_method(:word_counter) do |word_to_count| 
     phrase = self 
     letters = phrase.split("")
-    array_length = letters.length()
     counter = 0
     
     letters.delete(".")
@@ -21,7 +20,9 @@ class String
     counter
   end
 end
-   
+
+
+#   array_length = letters.length()
 #      letters.each do |letter|   
 #      until counter.==(array_length.+(1))
 #           if letter.==(",")
