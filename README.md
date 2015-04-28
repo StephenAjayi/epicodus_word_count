@@ -1,5 +1,5 @@
-Authored By: 
-  Stephen Ajayi
+Authored By:<br />
+  Stephen Ajayi</br />
 What it Does:
   Word counter allows users to count how many times a word appears in a given string.
 
